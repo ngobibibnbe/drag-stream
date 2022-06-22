@@ -64,7 +64,7 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 2. [Execution time](#Execution time (ms))
 
 ### F1-score
-| \textbf{Dataset}     | \multicolumn{2}{| c |}{\texttt{DragStream}} | \multicolumn{2}{| c |}{\texttt{LAMP}} | \multicolumn{2}{| c |}{\texttt{Matrix Profile}} |
+| \textbf{Dataset}     <td colspan=2>DragStream <td colspan=2> LAMP <td colspan=2> Matrix Profile |
 |----------------------|---------------------------------------------|---------------------------------------|-------------------------------------------------|
 |                      | \textbf{Score}| \textbf{Params}           | \textbf{Score} | \textbf{Params}        | \textbf{Score}   | \textbf{Params} |
 | stdb\_308\_1         | 0.19                                        | C=15, W=1330, r=8                     | \textbf{ 0.22}                                  | W=1350          | 0.069            | p=2             |
