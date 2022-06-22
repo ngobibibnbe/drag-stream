@@ -4,16 +4,16 @@
 A method for abnormal subsequence detection/discord in data stream. 
 
 This work: 
+:white_check_mark: Proposition of an abnormal subsequence detection method
 
-:white_check_mark: Compare some data stream anomaly detection methods on their latences and performances 
+:white_check_mark: Comparison to SOTA abnormal subsequence detection methods on their latences and performances 
 
-:white_check_mark: comparison to other subsequence detection method
 
 ### Interested in my work?
 
 Feel free to contact me at: xxxx@xx (Going to be changed after the review, if there is any problem, initiate an issue and i will reply)
 
-*The final version of our paper (in French) on the benchmark of data stream outlier detection methods is being submitted to 2020 ICDM conference.
+*The final version of our paper Drag-stream is being submitted to 2020 ICDM conference.
 
 ### README Structure
 1. [Methods compared](#Methods-compared): Presentation of methods we compared
