@@ -11,7 +11,7 @@ This work:
 
 ### Interested in my work?
 
-Feel free to contact me at: anne.ngobibinbe@gmail.com
+Feel free to contact me at: xxxx@xx (Going to be changed after the review, if there is any problem, initiate an issue and i will reply)
 
 *The final version of our paper (in French) on the benchmark of data stream outlier detection methods is being submitted to 2020 ICDM conference.
 
@@ -34,12 +34,27 @@ Methods:
 . 
 
 ## Datasets and their characteristics
-We selected datasets mostly from real known life problems.
+We selected datasets mostly from diverse domains real life problems.
+
+| Dataset       | Domain | Size |Number Of Known Anomalies | Has Concept Drifts |
+|----------------------|-----------------|---------------|------------------------------------|-----------------------------|
+| stdb\_308\_1         | ECG             | 5400          | 1                                  | no                          |
+| xmitdb\_x108\_1      | ECG             | 5400          | 1                                  | yes                         |
+| mitdb\_100\_180\_1   | ECG             | 5400          | 1                                  | no                          |
+| chfdb\_chf01\_275\_1 | ECG             | 3751          | 1                                  | no                          |
+| ltstdb\_20221\_43\_1 | ECG             | 5400          | 1                                  | no                          |
+| mitdbx\_108          | ECG             | 16000         | 3                                  | yes                         |
+| qtdbsele0606         | ECG             | 15000         | 1                                  | no                          |
+| chfdbchf15           | ECG             | 15000         | 1                                  | no                          |
+| ann-gun              | video recording | 11248         | 1                                  | no                          |
+| patient respiration  | pneumology      | 6500          | 1                                  | yes                         |
+| dutch power demand   | power demand    | 35040         | 4                                  | no                          |
+| gps trajectory       | GPS             | 17175         | 1                                  | no                          |
 
  
 
 ## Description of the experimental protocol
-For each dataset, a bayesian optimization is performed to find best hyperparameters (details of the hyperparameter search space of each method could be found in the implementation details (page 8) section of the [summary_of_the_experiment](https://github.com/nams2000/anomaly-detection-in-data-stream/blob/master/summary_of_the_experiments.pdf) file), then we test the method with the best hyperparameters and record the execution time and the f1-score. Finally we process the latence or response time (average time to treat an instance) (**latence =the execution time on the dataset**). To process the f1-score, we process as explain in the paper.
+For each dataset, a bayesian optimization is performed to find best hyperparameters (details of the hyperparameter search space of each method could be found in the implementation details (page 8) section of the [summary_of_the_experiment](https://github.com/nams2000/anomaly-detection-in-data-stream/blob/master/summary_of_the_experiments.pdf) file), then we test the method with the best hyperparameters and record the execution time and the f1-score. Finally we process the latence or response time (average time to treat an instance) (**latence =the execution time on the dataset**). The f1-score,is processed in order to take into account the accuracy and the recall of each method.
 
 ## Results
 Due to conception restrictions KitNet couldn't be applied on univariate datasets and Online ARIMA can't be applied on multivariate datasets. 
@@ -49,31 +64,41 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 2. [Execution time](#Execution time (ms))
 
 ### F1-score
-
-Dataset | MILOF | IforestASD | HStree | Online ARIMA 
------|-------------|------------|------------|-----------
-ambiant temperature system failure| 0.4| **0.67** | 0.3 | **0.67**
-cpu utilization asg misconfiguration|  0.5 |0.42 | 0.45 | **1**
-ec2 request latency system failure| 0.5 | 0.343 | **0.94**  | 0.8 
-machine temperature system failure| 0.15 | 0.7825 |**0.88** | 0.66
-new york taxi|0.25 | 0.31 | 0.5 | **0.6**
-rogue agent keyhold|  0.136 | 0.33 | 0.079 | 0.1
-rogue agent key up down| 0.4 | **0.67** | 0.15 | 0.11
-
-
+| \textbf{Dataset}     | \multicolumn{2}{| c |}{\texttt{DragStream}} | \multicolumn{2}{| c |}{\texttt{LAMP}} | \multicolumn{2}{| c |}{\texttt{Matrix Profile}} |
+|----------------------|---------------------------------------------|---------------------------------------|-------------------------------------------------|
+|                      | \textbf{Score}                              | \textbf{Params}                       | \textbf{Score}                                  | \textbf{Params} | \textbf{Score}   | \textbf{Params} |
+| %                    | \textbf{Score}                              | \textbf{Params}                       |
+| stdb\_308\_1         | 0.19                                        | C=15, W=1330, r=8                     | \textbf{ 0.22}                                  | W=1350          | 0.069            | p=2             |
+| xmitdb\_x108\_1      | 0.24                                        | C=14, W=1256, r=2.5                   | 0                                               | W=1350          | \textbf{0.554 }  | p=3             |
+| mitdb\_\_100\_180\_1 | 0.5                                         | C=16, W=1236, r=4.5                   | 0                                               | W=1350          | \textbf{ 0.5468} | p=3             |
+| chfdb\_chf01\_275\_1 | 0.5                                         | C=17, W=751, r=2.5                    | 0.09                                            | W=937           | \textbf{ 0.63}   | p=3             |
+| ltstdb\_20221\_43\_1 | 0.4                                         | C=19, W=440, r=3.0                    | 0.1                                             | W=937           | \textbf{0.415 }  | p=1             |
+| mitdbx\_108          | 0.48                                        | C=10, W=4479, r=3.5                   | 0.285                                           | W=5400          | \textbf{0.821 }  | p=3             |
+| qtdbsele0606         | 0.01                                        | C=10, W=222, r=4.5                    | \textbf{0.55}                                   | W=3750          | 0.005            | p=1             |
+| chfdbchf15           | 0.5                                         | C=15, W=2915, r=1.5                   | 0.067                                           | W=3750          | \textbf{0.81}    | p=1             |
+| ann-gun              | \textbf{0.36}                               | C=13, W=178, r=1.0                    | 0.26                                            | W=2812          | 0.026            | p=3             |
+| patient respiration  | \textbf{0.67 }                              | C=14, W=1011, r=4.5                   | 0.24                                            | W=1627          | 0.46             | p=3             |
+| dutch power demand   | 0.56                                        | C=29, W=4433, r=2.0                   | 0.1639                                          | W=8760          | \textbf{0.75}    | p=5             |
+| gps trajectory       | \textbf{0.286}                              | C=18, W=4210, r=8.5                   | 0                                               | W=4293          | 0.08             | p=2             |
+| Mean $\pm$ STD       | $0.39 \pm 0.18$                             |                                       | $0.16 \pm 0.15$                                 |                 | $0.43 \pm 0.31$  |                 |
 
 ### Execution time (ms)
-we rounded execution time.
 
- Dataset | MILOF | IforestASD | HStree | Online ARIMA 
------|-------------|------------|------------|-----------
-ambiant temperature system failure| 172 | 200 | 212 | **50**
-cpu utilization asg misconfiguration| 430 | 438 | 738 | **129**
-ec2 request latency system failure| 51 | 167 | 125 | **38**
-machine temperature system failure| 560 | 580 | 9752 | **109**
-new york taxi | **275** | 269 | 4776 | 391
-rogue agent keyhold|  31 | 76| **16** | 17
-rogue agent key up down| 26  | 203 | **8** | 37
+| extbf{Dataset}       | \texttt{DragStream} | \texttt{LAMP}         | \texttt{Matrix Profile} |
+|----------------------|---------------------|-----------------------|-------------------------|
+| stdb\_308\_1         | \textbf{7.1}        | 554                   | 9.54                    |
+| xmitdb\_x108\_1      | 7.1                 | 442                   | \textbf{6.33}           |
+| mitdb\_\_100\_180\_1 | 7.29                | 554                   | \textbf{6.34}           |
+| chfdb\_chf01\_275\_1 | \textbf{1.75}       | 443                   | 2.91                    |
+| ltstdb\_20221\_43\_1 | 1.65                | 3.61                  | \textbf{1.57}           |
+| mitdbx\_108          | 324                 | 7162                  | \textbf{322}            |
+| qtdbsele0606         | 13.43               | 851                   | \textbf{ 7.89}          |
+| chfdbchf15           | 49.42               | 2535                  | \textbf{47.41}          |
+| ann-gun              | \textbf{13.29}      | 1364                  | 25.86                   |
+| patient respiration  | 14.29               | 531                   | \textbf{3.63}           |
+| dutch power demand   | \textbf{15.3}       | 9981                  | 1042                    |
+| gps trajectory       | \textbf{115}        | 9302                  | 206.27                  |
+| Mean $\pm$ STD       | 47.47 $\pm$ 88.77   | 2810.31 $\pm$ 3570.39 | 140.15 $\pm$ 288.6      |
 
 
 
@@ -106,47 +131,21 @@ Details on characteristics of the datasets and hyperparameters we found are summ
 
 ## Referencies:
 ### 1. Methods:
-
-Togbe, M. U., Y. Chabchoub, A. Boly, M. Barry, R. Chiky, et M. Bahri (2021). Anomalies
-Detection Using Isolation in Concept-Drifting Data Streams. Computers 10(1).
-
-Ding, Z. et M. Fei (2013). An anomaly detection approach based on isolation forest algorithm
-for streaming data using sliding window. IFAC Proceedings Volumes 46(20), 12–17. 3rd
-IFAC Conference on Intelligent Control and Automation Science ICONS 2013
-
-an, S. C., K. M. Ting, et T. F. Liu (2011). Fast anomaly detection for streaming data. In
-Proceedings of the Twenty-Second International Joint Conference on Artificial Intelligence Volume Volume Two, IJCAI’11, pp. 1511–1516. AAAI Press.
-
-Salehi, M., C. Leckie, J. C. Bezdek, T. Vaithianathan, et X. Zhang (2016). Fast memory
-efficient local outlier detection in data streams. IEEE Transactions on Knowledge and Data
-Engineering 28, 3246–3260.
-
-Mirsky, Y., T. Doitshman, Y. Elovici, et A. Shabtai (2018). Kitsune : An ensemble of autoencoders for online network intrusion detection. arXiv :1802.09089 [cs]. version : 2
-
-Liu, C., S. C. H. Hoi, P. Zhao, et J. Sun (2016). Online arima algorithms for time series prediction. In Proceedings of the Thirtieth AAAI Conference on Artificial Intelligence, AAAI’16,
-pp. 1867–1873. AAAI Press
-
-
+C.-C. M. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. A. Dau, D. F. Silva, A. Mueen, and E. Keogh, “Matrix profile i: All pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets,” in 2016 IEEE 16th International Conference on Data Mining
+(ICDM), pp. 1317–1322, 2016.
 
 
 ### 2. Datasets:
 
-Lavin, A. et S. Ahmad (2015). Evaluating real-time anomaly detection algorithms - the numenta anomaly benchmark. CoRR abs/1510.03336.
+T. Nakamura, M. Imamura, R. Mercer, and E. Keogh, “Merlin:Parameter-free discovery of arbitrary length anomalies in massive time series archives,” in IEEE International Conference on Data Mining (ICDM), pp. 1190–1195, 2020.
 
-Iurii Katser, Viacheslav Kozitsin, V. L. et I. Maksimov (2021). Unsupervised offline change point detection ensembles. Applied sciences 11, 4280
+P. M. Chau, B. M. Duc, and D. T. Anh, “Discord discovery in streaming time series based on an improved hot sax algorithm,” in Proceedings of the Ninth International Symposium on Information and Communication Technology, SoICT 2018, (New York, NY, USA), p. 24–30, Association for Computing Machinery, 2018.
 
 
 ### 3. Comparative studies:
 
-Togbe, M., Y. Chabchoub, A. Boly, R. Chiky, C. Etude, et M. U. Togbe (2020). Etude compa-
-rative des méthodes de détection d’anomalies. Revue des Nouvelles Technologies de l’Information Extraction et Gestion des Connaissances , RNTI-E-36, 109–120
-
 SalehiMahsa et RashidiLida (2018). A Survey on Anomaly detection in Evolving Data. ACM
 SIGKDD Explorations Newsletter 20(1), 13–23.
-
-Nakamura, T., M. Imamura, R. Mercer, et E. Keogh (2020). Merlin : Parameter-free discovery
-of arbitrary length anomalies in massive time series archives. In 2020 IEEE International
-Conference on Data Mining (ICDM), pp. 1190–1195
 
 Chandola, V., A. Banerjee, et V. Kumar (2009). Anomaly detection : A survey. ACM Comput.
 Surv. 41(3).
