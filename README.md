@@ -82,20 +82,20 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 | Mean $\pm$ STD       | $0.39 \pm 0.18$ |                     | $0.16 \pm 0.15$ |                 | $0.43 \pm 0.31$  |                 |
 ### Execution time (ms)
 
-| extbf{Dataset}       | \texttt{DragStream} | \texttt{LAMP}         | \texttt{Matrix Profile} |
+|       Dataset        |         DragStream  |         LAMP          |         Matrix Profile  |
 |----------------------|---------------------|-----------------------|-------------------------|
-| stdb\_308\_1         | \textbf{7.1}        | 554                   | 9.54                    |
-| xmitdb\_x108\_1      | 7.1                 | 442                   | *6.33*          |
-| mitdb\_\_100\_180\_1 | 7.29                | 554                   | \textbf{6.34}           |
-| chfdb\_chf01\_275\_1 | *1.75*       | 443                   | 2.91                    |
-| ltstdb\_20221\_43\_1 | 1.65                | 3.61                  | \textbf{1.57}           |
-| mitdbx\_108          | 324                 | 7162                  | \textbf{322}            |
-| qtdbsele0606         | 13.43               | 851                   | \textbf{ 7.89}          |
-| chfdbchf15           | 49.42               | 2535                  | \textbf{47.41}          |
-| ann-gun              | \textbf{13.29}      | 1364                  | 25.86                   |
-| patient respiration  | 14.29               | 531                   | \textbf{3.63}           |
-| dutch power demand   | \textbf{15.3}       | 9981                  | 1042                    |
-| gps trajectory       | \textbf{115}        | 9302                  | 206.27                  |
+| stdb\_308\_1         |         7.1         | 554                   | 9.54                    |
+| xmitdb\_x108\_1      | 7.1                 | 442                   | 6.33                    |
+| mitdb\_\_100\_180\_1 | 7.29                | 554                   |         6.34            |
+| chfdb\_chf01\_275\_1 |   1.75              | 443                   | 2.91                    |
+| ltstdb\_20221\_43\_1 | 1.65                | 3.61                  |         1.57            |
+| mitdbx\_108          | 324                 | 7162                  |         322             |
+| qtdbsele0606         | 13.43               | 851                   |          7.89           |
+| chfdbchf15           | 49.42               | 2535                  |         47.41           |
+| ann-gun              |         13.29       | 1364                  | 25.86                   |
+| patient respiration  | 14.29               | 531                   |         3.63            |
+| dutch power demand   |         15.3        | 9981                  | 1042                    |
+| gps trajectory       |         115         | 9302                  | 206.27                  |
 | Mean $\pm$ STD       | 47.47 $\pm$ 88.77   | 2810.31 $\pm$ 3570.39 | 140.15 $\pm$ 288.6      |
 
 
