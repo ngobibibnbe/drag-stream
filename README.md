@@ -4,6 +4,7 @@
 A method for abnormal subsequence detection/discord in data stream. 
 
 This work: 
+
 :white_check_mark: Proposition of an abnormal subsequence detection method
 
 :white_check_mark: Comparison to SOTA abnormal subsequence detection methods on their latences and performances 
