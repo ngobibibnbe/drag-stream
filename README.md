@@ -64,23 +64,22 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 2. [Execution time](#Execution time (ms))
 
 ### F1-score
-| \textbf{Dataset}     <td colspan=2>DragStream <td colspan=2> LAMP <td colspan=2> Matrix Profile |
-|----------------------|---------------------------------------------|---------------------------------------|-------------------------------------------------|
-|                      | \textbf{Score}| \textbf{Params}           | \textbf{Score} | \textbf{Params}        | \textbf{Score}   | \textbf{Params} |
-| stdb\_308\_1         | 0.19                                        | C=15, W=1330, r=8                     | \textbf{ 0.22}                                  | W=1350          | 0.069            | p=2             |
-| xmitdb\_x108\_1      | 0.24                                        | C=14, W=1256, r=2.5                   | 0                                               | W=1350          | \textbf{0.554 }  | p=3             |
-| mitdb\_\_100\_180\_1 | 0.5                                         | C=16, W=1236, r=4.5                   | 0                                               | W=1350          | \textbf{ 0.5468} | p=3             |
-| chfdb\_chf01\_275\_1 | 0.5                                         | C=17, W=751, r=2.5                    | 0.09                                            | W=937           | \textbf{ 0.63}   | p=3             |
-| ltstdb\_20221\_43\_1 | 0.4                                         | C=19, W=440, r=3.0                    | 0.1                                             | W=937           | \textbf{0.415 }  | p=1             |
-| mitdbx\_108          | 0.48                                        | C=10, W=4479, r=3.5                   | 0.285                                           | W=5400          | \textbf{0.821 }  | p=3             |
-| qtdbsele0606         | 0.01                                        | C=10, W=222, r=4.5                    | \textbf{0.55}                                   | W=3750          | 0.005            | p=1             |
-| chfdbchf15           | 0.5                                         | C=15, W=2915, r=1.5                   | 0.067                                           | W=3750          | \textbf{0.81}    | p=1             |
-| ann-gun              | \textbf{0.36}                               | C=13, W=178, r=1.0                    | 0.26                                            | W=2812          | 0.026            | p=3             |
-| patient respiration  | \textbf{0.67 }                              | C=14, W=1011, r=4.5                   | 0.24                                            | W=1627          | 0.46             | p=3             |
-| dutch power demand   | 0.56                                        | C=29, W=4433, r=2.0                   | 0.1639                                          | W=8760          | \textbf{0.75}    | p=5             |
-| gps trajectory       | \textbf{0.286}                              | C=18, W=4210, r=8.5                   | 0                                               | W=4293          | 0.08             | p=2             |
-| Mean $\pm$ STD       | $0.39 \pm 0.18$                             |                                       | $0.16 \pm 0.15$                                 |                 | $0.43 \pm 0.31$  |                 |
-
+| Dataset              |DragStream                            ||LAMP                              ||Matrix Profile                     ||
+|----------------------|-----------------|---------------------|-----------------|-----------------|------------------|-----------------|
+|                      |       Score     |         Params      |         Score   |         Params  |         Score    |         Params  |
+| stdb\_308\_1         | 0.19            | C=15, W=1330, r=8   |          0.22   | W=1350          | 0.069            | p=2             |
+| xmitdb\_x108\_1      | 0.24            | C=14, W=1256, r=2.5 | 0               | W=1350          |         0.554    | p=3             |
+| mitdb\_\_100\_180\_1 | 0.5             | C=16, W=1236, r=4.5 | 0               | W=1350          |          0.5468  | p=3             |
+| chfdb\_chf01\_275\_1 | 0.5             | C=17, W=751, r=2.5  | 0.09            | W=937           |          0.63    | p=3             |
+| ltstdb\_20221\_43\_1 | 0.4             | C=19, W=440, r=3.0  | 0.1             | W=937           |         0.415    | p=1             |
+| mitdbx\_108          | 0.48            | C=10, W=4479, r=3.5 | 0.285           | W=5400          |         0.821    | p=3             |
+| qtdbsele0606         | 0.01            | C=10, W=222, r=4.5  |         0.55    | W=3750          | 0.005            | p=1             |
+| chfdbchf15           | 0.5             | C=15, W=2915, r=1.5 | 0.067           | W=3750          |         0.81     | p=1             |
+| ann-gun              |         0.36    | C=13, W=178, r=1.0  | 0.26            | W=2812          | 0.026            | p=3             |
+| patient respiration  |         0.67    | C=14, W=1011, r=4.5 | 0.24            | W=1627          | 0.46             | p=3             |
+| dutch power demand   | 0.56            | C=29, W=4433, r=2.0 | 0.1639          | W=8760          |         0.75     | p=5             |
+| gps trajectory       |         0.286   | C=18, W=4210, r=8.5 | 0               | W=4293          | 0.08             | p=2             |
+| Mean $\pm$ STD       | $0.39 \pm 0.18$ |                     | $0.16 \pm 0.15$ |                 | $0.43 \pm 0.31$  |                 |
 ### Execution time (ms)
 
 | extbf{Dataset}       | \texttt{DragStream} | \texttt{LAMP}         | \texttt{Matrix Profile} |
