@@ -28,9 +28,9 @@ Feel free to contact me at: xxxx@xx (Going to be changed after the review, if th
 As it's the case for most of the anomaly detection methods, the following methods produce an anomaly score for each incoming instance showing how well the instance could be an anomaly, finally a threshold fixed by the user permits to say that instances with anomaly scores higher than the threshold are anomalies. In the literature, data stream anomaly detection methods are mostly separated into statistical based, tree based, proximity based and deep learning based approaches. We have chosen highly used and recommended approaches in each of those categories. 
 
 Methods:
-1. [LAMP](https://github.com/petrospgithub/onlinearima) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
+1. [LAMP]([https://github.com/petrospgithub/onlinearima](https://arxiv.org/pdf/2108.12093.pdf)) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
 2. [Drag-stream] : Our proposition for discord detection
-3. [Matrix Profile] : Time sries abnormal subsequence detection
+3. [Matrix Profile](https://matrixprofile.docs.matrixprofile.org/) : Time sries abnormal subsequence detection
 . 
 
 ## Datasets and their characteristics
@@ -66,8 +66,7 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 ### F1-score
 | \textbf{Dataset}     | \multicolumn{2}{| c |}{\texttt{DragStream}} | \multicolumn{2}{| c |}{\texttt{LAMP}} | \multicolumn{2}{| c |}{\texttt{Matrix Profile}} |
 |----------------------|---------------------------------------------|---------------------------------------|-------------------------------------------------|
-|                      | \textbf{Score}                              | \textbf{Params}                       | \textbf{Score}                                  | \textbf{Params} | \textbf{Score}   | \textbf{Params} |
-| %                    | \textbf{Score}                              | \textbf{Params}                       |
+|                      | \textbf{Score}| \textbf{Params}           | \textbf{Score} | \textbf{Params}        | \textbf{Score}   | \textbf{Params} |
 | stdb\_308\_1         | 0.19                                        | C=15, W=1330, r=8                     | \textbf{ 0.22}                                  | W=1350          | 0.069            | p=2             |
 | xmitdb\_x108\_1      | 0.24                                        | C=14, W=1256, r=2.5                   | 0                                               | W=1350          | \textbf{0.554 }  | p=3             |
 | mitdb\_\_100\_180\_1 | 0.5                                         | C=16, W=1236, r=4.5                   | 0                                               | W=1350          | \textbf{ 0.5468} | p=3             |
@@ -87,9 +86,9 @@ Due to conception restrictions KitNet couldn't be applied on univariate datasets
 | extbf{Dataset}       | \texttt{DragStream} | \texttt{LAMP}         | \texttt{Matrix Profile} |
 |----------------------|---------------------|-----------------------|-------------------------|
 | stdb\_308\_1         | \textbf{7.1}        | 554                   | 9.54                    |
-| xmitdb\_x108\_1      | 7.1                 | 442                   | \textbf{6.33}           |
+| xmitdb\_x108\_1      | 7.1                 | 442                   | *6.33*          |
 | mitdb\_\_100\_180\_1 | 7.29                | 554                   | \textbf{6.34}           |
-| chfdb\_chf01\_275\_1 | \textbf{1.75}       | 443                   | 2.91                    |
+| chfdb\_chf01\_275\_1 | *1.75*       | 443                   | 2.91                    |
 | ltstdb\_20221\_43\_1 | 1.65                | 3.61                  | \textbf{1.57}           |
 | mitdbx\_108          | 324                 | 7162                  | \textbf{322}            |
 | qtdbsele0606         | 13.43               | 851                   | \textbf{ 7.89}          |
@@ -126,7 +125,7 @@ The results of the test will be in the folder result. The result file contains (
 For each dataset and each method.
 
 **Notices:** 
-Details on characteristics of the datasets and hyperparameters we found are summarized in the file: [summary_of_the_experiment.pdf](https://github.com/nams2000/anomaly-detection-in-data-stream/blob/master/summary_of_the_experiments.pdf). 
+Details on characteristics of the datasets and hyperparameters we found are summarized in the file: [summary_of_the_experiment.pdf]
 
 
 ## Referencies:
@@ -134,6 +133,7 @@ Details on characteristics of the datasets and hyperparameters we found are summ
 C.-C. M. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. A. Dau, D. F. Silva, A. Mueen, and E. Keogh, “Matrix profile i: All pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets,” in 2016 IEEE 16th International Conference on Data Mining
 (ICDM), pp. 1317–1322, 2016.
 
+Z. Zimmerman et al., "Matrix Profile XVIII: Time Series Mining in the Face of Fast Moving Streams using a Learned Approximate Matrix Profile," 2019 IEEE International Conference on Data Mining (ICDM), 2019, pp. 936-945, doi: 10.1109/ICDM.2019.00104.
 
 ### 2. Datasets:
 
