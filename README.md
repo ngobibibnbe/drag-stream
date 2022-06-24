@@ -14,7 +14,7 @@ This work:
 
 Feel free to contact me at: xxxx@xx (Going to be changed after the review, if there is any problem, initiate an issue and i will reply)
 
-*The final version of our paper Drag-stream is being submitted to 2020 ICDM conference.
+*The final version of our paper Drag-stream is being submitted to 2022 ICDM conference.
 
 ### README Structure
 1. [Methods compared](#Methods-compared): Presentation of methods we compared
@@ -29,9 +29,9 @@ Feel free to contact me at: xxxx@xx (Going to be changed after the review, if th
 As it's the case for most of the anomaly detection methods, the following methods produce an anomaly score for each incoming instance showing how well the instance could be an anomaly, finally a threshold fixed by the user permits to say that instances with anomaly scores higher than the threshold are anomalies. In the literature, data stream anomaly detection methods are mostly separated into statistical based, tree based, proximity based and deep learning based approaches. We have chosen highly used and recommended approaches in each of those categories. 
 
 Methods:
-1. [LAMP]([https://github.com/petrospgithub/onlinearima](https://arxiv.org/pdf/2108.12093.pdf)) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
+1. [LAMP]([https://arxiv.org/pdf/2108.12093.pdf]) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
 2. [Drag-stream] : Our proposition for discord detection
-3. [Matrix Profile](https://matrixprofile.docs.matrixprofile.org/) : Time sries abnormal subsequence detection
+3. [Matrix Profile]([https://matrixprofile.docs.matrixprofile.org/]) : Time sries abnormal subsequence detection
 . 
 
 ## Datasets and their characteristics
@@ -58,7 +58,6 @@ We selected datasets mostly from diverse domains real life problems.
 For each dataset, a bayesian optimization is performed to find best hyperparameters (details of the hyperparameter search space of each method could be found in the implementation details (page 8) section of the [summary_of_the_experiment](https://github.com/nams2000/anomaly-detection-in-data-stream/blob/master/summary_of_the_experiments.pdf) file), then we test the method with the best hyperparameters and record the execution time and the f1-score. Finally we process the latence or response time (average time to treat an instance) (**latence =the execution time on the dataset**). The f1-score,is processed in order to take into account the accuracy and the recall of each method.
 
 ## Results
-Due to conception restrictions KitNet couldn't be applied on univariate datasets and Online ARIMA can't be applied on multivariate datasets. 
 
 :link: Anchor Links:
 1. [Score](#F1-score)
@@ -129,6 +128,7 @@ Details on characteristics of the datasets and hyperparameters we found are summ
 
 
 ## Referencies:
+
 ### 1. Methods:
 C.-C. M. Yeh, Y. Zhu, L. Ulanova, N. Begum, Y. Ding, H. A. Dau, D. F. Silva, A. Mueen, and E. Keogh, “Matrix profile i: All pairs similarity joins for time series: A unifying view that includes motifs, discords and shapelets,” in 2016 IEEE 16th International Conference on Data Mining
 (ICDM), pp. 1317–1322, 2016.
