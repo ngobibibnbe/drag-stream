@@ -29,9 +29,9 @@ Feel free to contact me at: xxxx@xx (Going to be changed after the review, if th
 As it's the case for most of the anomaly detection methods, the following methods produce an anomaly score for each incoming instance showing how well the instance could be an anomaly, finally a threshold fixed by the user permits to say that instances with anomaly scores higher than the threshold are anomalies. In the literature, data stream anomaly detection methods are mostly separated into statistical based, tree based, proximity based and deep learning based approaches. We have chosen highly used and recommended approaches in each of those categories. 
 
 Methods:
-1. [LAMP]([https://arxiv.org/pdf/2108.12093.pdf]) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
+1. [LAMP](https://arxiv.org/pdf/2108.12093.pdf) : A method for abnormal subsequence detection in data stream inspired from Matrix profile
 2. [Drag-stream] : Our proposition for discord detection
-3. [Matrix Profile]([https://matrixprofile.docs.matrixprofile.org/]) : Time sries abnormal subsequence detection
+3. [Matrix Profile](https://matrixprofile.docs.matrixprofile.org/) : Time sries abnormal subsequence detection
 . 
 
 ## Datasets and their characteristics
@@ -61,7 +61,7 @@ For each dataset, a bayesian optimization is performed to find best hyperparamet
 
 :link: Anchor Links:
 1. [Score](#F1-score)
-2. [Execution time](#Execution time (ms))
+2. [Execution time](#Execution_time_(ms))
 
 ### F1-score
 | Dataset              |DragStream                            ||LAMP                              ||Matrix Profile                     ||
