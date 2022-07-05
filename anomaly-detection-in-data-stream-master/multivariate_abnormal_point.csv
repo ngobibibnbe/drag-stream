@@ -1,9 +1,0 @@
-Dataset,Dataset length,Type,#discords,Position discord,discord length
-clean_multivariate/SKAB/other/13.csv,968,SKAB,4,568; 624; 909; 966,200
-clean_multivariate/SKAB/other/17.csv,1147,SKAB,4,572; 574; 972; 975,200
-clean_multivariate/SKAB/other/20.csv,1191,SKAB,4, 570;  573;  925; 1021,200
-clean_multivariate/SKAB/other/9.csv,751,SKAB,2,557; 614,200
-clean_multivariate/SKAB/other/14.csv,1153,SKAB,2,571; 981,200
-clean_multivariate/SKAB/other/11.csv,665,SKAB,4,109; 149; 435; 493,200
-clean_multivariate/SKAB/other/22.csv,1079,SKAB,4,569; 627; 853; 908,200
-clean_multivariate/SKAB/other/15.csv,1147,SKAB,4,574; 633; 915; 975,200

@@ -1,1 +1,0 @@
-python3 test_MILOF.py > milof_record.txt
